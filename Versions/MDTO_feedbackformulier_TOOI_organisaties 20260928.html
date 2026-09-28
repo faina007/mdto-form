@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONCEPT Feedbackformulier MDTO-handreiking</title>
+<style>
+:root{
+  --primary:#005a9c;--primary-dark:#004578;--bg:#f4f6f8;--card:#fff;
+  --border:#d5dbe0;--text:#222;--muted:#666;--success:#107c10;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+header{background:var(--primary);color:#fff;padding:30px 20px}
+header .container,main,footer{max-width:1050px;margin:auto}
+header h1{margin:0 0 8px;font-size:28px}
+header p{margin:0}
+main{padding:30px 20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:25px;margin-bottom:20px;box-shadow:0 2px 5px rgba(0,0,0,.05)}
+h2{margin-top:0;color:var(--primary-dark);font-size:21px}
+.intro{background:#eef6fc;border-left:4px solid var(--primary);padding:15px;margin-bottom:25px}
+.form-group{margin-bottom:22px}
+label{display:block;font-weight:bold;margin-bottom:7px}
+.required{color:#b40000}
+.help{display:block;color:var(--muted);font-size:13px;margin-top:5px}
+select,input[type=text],input[type=email],textarea{
+ width:100%;padding:11px 12px;border:1px solid #aeb7c0;border-radius:5px;
+ font-size:15px;background:#fff
+}
+select:focus,input:focus,textarea:focus{outline:2px solid #8cc4e8;border-color:var(--primary)}
+textarea{min-height:150px;resize:vertical}
+.radio-group{display:grid;gap:9px}
+.radio-option{display:flex;align-items:flex-start;gap:9px;font-weight:normal}
+.radio-option input{width:auto;margin-top:5px}
+.button-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+button{border:0;border-radius:5px;padding:11px 18px;font-size:15px;cursor:pointer}
+.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:var(--primary-dark)}
+.btn-secondary{background:#e8edf1;color:#222}.btn-success{background:var(--success);color:#fff}
+.feedback-item{border:1px solid var(--border);border-radius:6px;padding:15px;margin-bottom:12px;background:#fafafa}
+.feedback-item strong{color:var(--primary-dark)}
+.feedback-meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+.priority{display:inline-block;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold}
+.priority-kritiek{background:#f8d7da;color:#721c24}.priority-hoog{background:#ffe5b4;color:#7a4500}
+.priority-middel{background:#fff3cd;color:#664d03}.priority-laag{background:#d1ecf1;color:#0c5460}
+.counter{font-weight:bold;color:var(--primary)}
+footer{padding:0 20px 40px;color:var(--muted);font-size:13px}
+.notice{background:#fff8e1;border:1px solid #e6cf82;border-radius:5px;padding:12px;margin-top:8px}
+@media(max-width:600px){header h1{font-size:23px}.card{padding:18px}.button-row{flex-direction:column}button{width:100%}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Feedbackformulier MDTO-handreiking</h1>
+    <p>Help mee om de handreiking en bijbehorende MDTO-documentatie te verbeteren.</p>
+  </div>
+</header>
+
+<main>
+  <div class="intro">
+    <strong>Hoe werkt dit formulier?</strong>
+    <p>
+      Kies eerst het MDTO-onderdeel waarop je commentaar wilt leveren.
+      Daarna verschijnt de bijbehorende hoofdstukstructuur. Kies het meest
+      specifieke onderdeel waarop je feedback betrekking heeft en beschrijf
+      vervolgens je opmerking.
+    </p>
+    <p><strong>Tip:</strong> dien bij voorkeur één inhoudelijk punt per feedbackmelding in.
+      Je kunt meerdere feedbackpunten achter elkaar toevoegen en ze daarna gezamenlijk
+      als CSV-bestand exporteren voor analyse in Excel.</p>
+  </div>
+
+  <section class="card">
+    <h2>1. Over jou</h2>
+    <div class="form-group">
+      <label for="naam">Naam</label>
+      <input type="text" id="naam" placeholder="Optioneel">
+    </div>
+    <div class="form-group">
+      <label for="organisatie">Organisatie</label>
+      <select id="organisatie">
+        <option value="">-- Kies je organisatie --</option>
+        <option value="CIBG">CIBG</option>
+        <option value="Gecombineerde Commissie Vennootschapsrecht">Gecombineerde Commissie Vennootschapsrecht</option>
+        <option value="Adviescollege huis- en hobbydierenlijst">Adviescollege huis- en hobbydierenlijst</option>
+        <option value="Adviescollege ICT-toetsing">Adviescollege ICT-toetsing</option>
+        <option value="Adviescollege levenslanggestraften">Adviescollege levenslanggestraften</option>
+        <option value="Adviescollege Nederlandse Gebarentaal">Adviescollege Nederlandse Gebarentaal</option>
+        <option value="Adviescollege Openbaarheid en Informatiehuishouding">Adviescollege Openbaarheid en Informatiehuishouding</option>
+        <option value="Adviescollege Rechtspositie Politieke Ambtsdragers">Adviescollege Rechtspositie Politieke Ambtsdragers</option>
+        <option value="Adviescollege toetsing regeldruk">Adviescollege toetsing regeldruk</option>
+        <option value="Adviescollege Veiligheid Groningen">Adviescollege Veiligheid Groningen</option>
+        <option value="Adviescollege Verloftoetsing tbs">Adviescollege Verloftoetsing tbs</option>
+        <option value="Adviescommissie beoordeling aangeboden cultuurbezit uit nalatenschappen">Adviescommissie beoordeling aangeboden cultuurbezit uit nalatenschappen</option>
+        <option value="Adviescommissie beroepsgerichte keuzevakken vmbo">Adviescommissie beroepsgerichte keuzevakken vmbo</option>
+        <option value="Adviescommissie Borgstelling MKB-kredieten">Adviescommissie Borgstelling MKB-kredieten</option>
+        <option value="Adviescommissie cyberweerbaarheid">Adviescommissie cyberweerbaarheid</option>
+        <option value="Adviescommissie Duurzaamheid Biomassa voor Energietoepassingen">Adviescommissie Duurzaamheid Biomassa voor Energietoepassingen</option>
+        <option value="Adviescommissie duurzame scheepsbouw">Adviescommissie duurzame scheepsbouw</option>
+        <option value="Adviescommissie EFMZV">Adviescommissie EFMZV</option>
+        <option value="Adviescommissie Gids proportionaliteit">Adviescommissie Gids proportionaliteit</option>
+        <option value="Adviescommissie Groeifaciliteit">Adviescommissie Groeifaciliteit</option>
+        <option value="Adviescommissie Internationaal Innoveren">Adviescommissie Internationaal Innoveren</option>
+        <option value="Adviescommissie Kredietcommissie">Adviescommissie Kredietcommissie</option>
+        <option value="Adviescommissie medische verklaringen voor de luchtvaart">Adviescommissie medische verklaringen voor de luchtvaart</option>
+        <option value="Adviescommissie Nationaal Groeifonds">Adviescommissie Nationaal Groeifonds</option>
+        <option value="Adviescommissie ongeschiktheidsontslag rechterlijke ambtenaren">Adviescommissie ongeschiktheidsontslag rechterlijke ambtenaren</option>
+        <option value="Adviescommissie participatie en emancipatie Sinti en Roma">Adviescommissie participatie en emancipatie Sinti en Roma</option>
+        <option value="Adviescommissie restitutieverzoeken cultuurgoederen en Tweede Wereldoorlog">Adviescommissie restitutieverzoeken cultuurgoederen en Tweede Wereldoorlog</option>
+        <option value="Adviescommissie richtlijn passend bewijs preventie">Adviescommissie richtlijn passend bewijs preventie</option>
+        <option value="Adviescommissie SDGP Partnerschapfaciliteit">Adviescommissie SDGP Partnerschapfaciliteit</option>
+        <option value="Adviescommissie seed capital technostarters">Adviescommissie seed capital technostarters</option>
+        <option value="Adviescommissie Stimuleringsregeling Technologie in Ondersteuning en Zorg">Adviescommissie Stimuleringsregeling Technologie in Ondersteuning en Zorg</option>
+        <option value="Adviescommissie tot benoeming leden Adviescommissie restitutieverzoeken cultuurgoederen en Tweede Wereldoorlog">Adviescommissie tot benoeming leden Adviescommissie restitutieverzoeken cultuurgoederen en Tweede Wereldoorlog</option>
+        <option value="Adviescommissie voor burgerlijk procesrecht">Adviescommissie voor burgerlijk procesrecht</option>
+        <option value="Adviescommissie vroegefasefinanciering academische innovatieve starters, hbo-innovatieve starters en TO2-innovatieve starters">Adviescommissie vroegefasefinanciering academische innovatieve starters, hbo-innovatieve starters en TO2-innovatieve starters</option>
+        <option value="Adviescommissie vroegefasefinanciering MKB-ondernemers en innovatieve starters">Adviescommissie vroegefasefinanciering MKB-ondernemers en innovatieve starters</option>
+        <option value="Adviesraad internationale vraagstukken">Adviesraad internationale vraagstukken</option>
+        <option value="Adviesraad Migratie">Adviesraad Migratie</option>
+        <option value="Adviesraad voor wetenschap, technologie en innovatie">Adviesraad voor wetenschap, technologie en innovatie</option>
+        <option value="Afdeling bestuursrechtspraak van de Raad van State">Afdeling bestuursrechtspraak van de Raad van State</option>
+        <option value="agentschap College ter Beoordeling van Geneesmiddelen">agentschap College ter Beoordeling van Geneesmiddelen</option>
+        <option value="Algemene Rekenkamer">Algemene Rekenkamer</option>
+        <option value="Auditteam Voetbal en Veiligheid">Auditteam Voetbal en Veiligheid</option>
+        <option value="Begeleidingscommissie voor het Sociaal en Cultureel Planbureau">Begeleidingscommissie voor het Sociaal en Cultureel Planbureau</option>
+        <option value="Beoordelingscommissie late zwangerschapsafbreking en levensbeëindiging bij pasgeborenen en kinderen van 1 tot 12 jaar">Beoordelingscommissie late zwangerschapsafbreking en levensbeëindiging bij pasgeborenen en kinderen van 1 tot 12 jaar</option>
+        <option value="Beoordelingscommissie Small Business Innovation Research programma">Beoordelingscommissie Small Business Innovation Research programma</option>
+        <option value="Beoordelingscommissie sterk techniekonderwijs">Beoordelingscommissie sterk techniekonderwijs</option>
+        <option value="Centraal Justitieel Incassobureau">Centraal Justitieel Incassobureau</option>
+        <option value="Centrale Adviescommissie Draaginsigne Gewonden">Centrale Adviescommissie Draaginsigne Gewonden</option>
+        <option value="Centrale Raad van Beroep">Centrale Raad van Beroep</option>
+        <option value="College Deskundigheid Financiële Dienstverlening">College Deskundigheid Financiële Dienstverlening</option>
+        <option value="College financieel toezicht Bonaire, Sint Eustatius en Saba">College financieel toezicht Bonaire, Sint Eustatius en Saba</option>
+        <option value="College financieel toezicht Curaçao en Sint Maarten">College financieel toezicht Curaçao en Sint Maarten</option>
+        <option value="College van Afgevaardigden">College van Afgevaardigden</option>
+        <option value="College van Beroep voor het bedrijfsleven">College van Beroep voor het bedrijfsleven</option>
+        <option value="Comité van toezicht EFMB">Comité van toezicht EFMB</option>
+        <option value="Commissie Associate degree">Commissie Associate degree</option>
+        <option value="Commissie auteursrecht">Commissie auteursrecht</option>
+        <option value="Commissie beoordeling uitingen maatschappelijk verantwoordelijkheidsbesef">Commissie beoordeling uitingen maatschappelijk verantwoordelijkheidsbesef</option>
+        <option value="Commissie beëdigde tolken en vertalers">Commissie beëdigde tolken en vertalers</option>
+        <option value="Commissie buitenslands gediplomeerden volksgezondheid">Commissie buitenslands gediplomeerden volksgezondheid</option>
+        <option value="Commissie Buitenslands Gediplomeerden Volksgezondheid">Commissie Buitenslands Gediplomeerden Volksgezondheid</option>
+        <option value="Commissie Doelmatigheid Hoger Onderwijs">Commissie Doelmatigheid Hoger Onderwijs</option>
+        <option value="Commissie Expertisecentra langdurige zorg">Commissie Expertisecentra langdurige zorg</option>
+        <option value="Commissie Feiten en Tarieven">Commissie Feiten en Tarieven</option>
+        <option value="Commissie genetische modificatie">Commissie genetische modificatie</option>
+        <option value="Commissie Gewetensbezwaren Immunisatie Militairen">Commissie Gewetensbezwaren Immunisatie Militairen</option>
+        <option value="Commissie insolventierecht">Commissie insolventierecht</option>
+        <option value="Commissie macrodoelmatigheid mbo">Commissie macrodoelmatigheid mbo</option>
+        <option value="Commissie onderzoek naar Binnenlandse Afstand en Adoptie">Commissie onderzoek naar Binnenlandse Afstand en Adoptie</option>
+        <option value="Commissie registratie diergeneesmiddelen">Commissie registratie diergeneesmiddelen</option>
+        <option value="Commissie risicobeoordeling nieuwe drugs">Commissie risicobeoordeling nieuwe drugs</option>
+        <option value="Commissie rol Koninklijk Huis in de zaak J.A. Poch">Commissie rol Koninklijk Huis in de zaak J.A. Poch</option>
+        <option value="Commissie sectorplan Bèta en Techniek">Commissie sectorplan Bèta en Techniek</option>
+        <option value="Commissie sectorplan Social Sciences and Humanities">Commissie sectorplan Social Sciences and Humanities</option>
+        <option value="Commissie van advies inzake volkenrechtelijke vraagstukken">Commissie van advies inzake volkenrechtelijke vraagstukken</option>
+        <option value="Commissie van onderzoek naar de Nederlandse wapeninzet in Hawija">Commissie van onderzoek naar de Nederlandse wapeninzet in Hawija</option>
+        <option value="Commissie van toezicht op de inlichtingen- en veiligheidsdiensten">Commissie van toezicht op de inlichtingen- en veiligheidsdiensten</option>
+        <option value="Commissie voor de milieueffectrapportage">Commissie voor de milieueffectrapportage</option>
+        <option value="Curriculumcommissie">Curriculumcommissie</option>
+        <option value="Curriculumcommissie">Curriculumcommissie</option>
+        <option value="Cyber Security Raad">Cyber Security Raad</option>
+        <option value="Deskundigengroep dierziekten">Deskundigengroep dierziekten</option>
+        <option value="Dienst ICT Uitvoering">Dienst ICT Uitvoering</option>
+        <option value="Dienst Justitiële Inrichtingen">Dienst Justitiële Inrichtingen</option>
+        <option value="Dienst Publiek en Communicatie">Dienst Publiek en Communicatie</option>
+        <option value="Dienst Terugkeer en Vertrek">Dienst Terugkeer en Vertrek</option>
+        <option value="Dienst Uitvoering Onderwijs">Dienst Uitvoering Onderwijs</option>
+        <option value="Dienst van de Huurcommissie">Dienst van de Huurcommissie</option>
+        <option value="Directoraat-generaal Belastingdienst">Directoraat-generaal Belastingdienst</option>
+        <option value="Directoraat-generaal Douane">Directoraat-generaal Douane</option>
+        <option value="Directoraat-generaal Toeslagen">Directoraat-generaal Toeslagen</option>
+        <option value="Ecologische Autoriteit">Ecologische Autoriteit</option>
+        <option value="Eerste Kamer">Eerste Kamer</option>
+        <option value="Expertgroep toetsen PO">Expertgroep toetsen PO</option>
+        <option value="Expertisenetwerk Waterveiligheid">Expertisenetwerk Waterveiligheid</option>
+        <option value="FMHaaglanden">FMHaaglanden</option>
+        <option value="Forum Standaardisatie">Forum Standaardisatie</option>
+        <option value="Gemeenschappelijk Hof van Justitie van Aruba, Curaçao, Sint Maarten en van Bonaire, Sint Eustatius en Saba">Gemeenschappelijk Hof van Justitie van Aruba, Curaçao, Sint Maarten en van Bonaire, Sint Eustatius en Saba</option>
+        <option value="Gerecht in Ambtenarenzaken van Aruba, Curaçao, Sint Maarten en van Bonaire, Sint Eustatius en Saba">Gerecht in Ambtenarenzaken van Aruba, Curaçao, Sint Maarten en van Bonaire, Sint Eustatius en Saba</option>
+        <option value="Gerechtshof Amsterdam">Gerechtshof Amsterdam</option>
+        <option value="Gerechtshof Arnhem-Leeuwarden">Gerechtshof Arnhem-Leeuwarden</option>
+        <option value="Gerechtshof Den Haag">Gerechtshof Den Haag</option>
+        <option value="Gerechtshof 's-Hertogenbosch">Gerechtshof 's-Hertogenbosch</option>
+        <option value="Gezondheidsraad">Gezondheidsraad</option>
+        <option value="Hoge Raad der Nederlanden">Hoge Raad der Nederlanden</option>
+        <option value="Hoge Raad van Adel">Hoge Raad van Adel</option>
+        <option value="Immigratie- en Naturalisatiedienst">Immigratie- en Naturalisatiedienst</option>
+        <option value="Inspecteur-Generaal der Krijgsmacht">Inspecteur-Generaal der Krijgsmacht</option>
+        <option value="Inspectie belastingen, toeslagen en douane">Inspectie belastingen, toeslagen en douane</option>
+        <option value="Inspectie Gezondheidszorg en Jeugd">Inspectie Gezondheidszorg en Jeugd</option>
+        <option value="Inspectie Justitie en Veiligheid">Inspectie Justitie en Veiligheid</option>
+        <option value="Inspectie Leefomgeving en Transport">Inspectie Leefomgeving en Transport</option>
+        <option value="Inspectie Overheidsinformatie en Erfgoed">Inspectie Overheidsinformatie en Erfgoed</option>
+        <option value="Inspectie van het Onderwijs">Inspectie van het Onderwijs</option>
+        <option value="Inspectie Veiligheid Defensie">Inspectie Veiligheid Defensie</option>
+        <option value="Jury Joke Smitprijs">Jury Joke Smitprijs</option>
+        <option value="Jury Jos Brinkprijs">Jury Jos Brinkprijs</option>
+        <option value="Justis">Justis</option>
+        <option value="Justitiële ICT Organisatie">Justitiële ICT Organisatie</option>
+        <option value="Justitiële Informatiedienst">Justitiële Informatiedienst</option>
+        <option value="Kanselarij der Nederlandse Orden">Kanselarij der Nederlandse Orden</option>
+        <option value="Klachtencommissie beëdigde tolken en vertalers">Klachtencommissie beëdigde tolken en vertalers</option>
+        <option value="Koninklijk Nederlands Meteorologisch Instituut">Koninklijk Nederlands Meteorologisch Instituut</option>
+        <option value="Koninklijke Beroepsorganisatie van Gerechtsdeurwaarders">Koninklijke Beroepsorganisatie van Gerechtsdeurwaarders</option>
+        <option value="Koninklijke Notariële Beroepsorganisatie">Koninklijke Notariële Beroepsorganisatie</option>
+        <option value="Kwaliteitscommissie Bibob">Kwaliteitscommissie Bibob</option>
+        <option value="Kwaliteitsinstituut beëdigde tolken en vertalers">Kwaliteitsinstituut beëdigde tolken en vertalers</option>
+        <option value="Landelijke Adviescommissie Plaatsing Langdurige Forensisch Psychiatrische Zorg">Landelijke Adviescommissie Plaatsing Langdurige Forensisch Psychiatrische Zorg</option>
+        <option value="Logius">Logius</option>
+        <option value="Mijnraad">Mijnraad</option>
+        <option value="Monitoring Commissie Corporate Governance Code">Monitoring Commissie Corporate Governance Code</option>
+        <option value="Nationaal Archief">Nationaal Archief</option>
+        <option value="Nationaal comité voor de bescherming van dieren">Nationaal comité voor de bescherming van dieren</option>
+        <option value="Nationaal Cyber Security Centrum">Nationaal Cyber Security Centrum</option>
+        <option value="Nationale ombudsman">Nationale ombudsman</option>
+        <option value="Nationale Unesco Commissie">Nationale Unesco Commissie</option>
+        <option value="Nederlands Comité voor Ondernemerschap">Nederlands Comité voor Ondernemerschap</option>
+        <option value="Nederlands Forensisch Instituut">Nederlands Forensisch Instituut</option>
+        <option value="Nederlandse Arbeidsinspectie">Nederlandse Arbeidsinspectie</option>
+        <option value="Nederlandse beroepsorganisatie van accountants">Nederlandse beroepsorganisatie van accountants</option>
+        <option value="Nederlandse Commissie beoordeling veiligheid voedselcontactmaterialen">Nederlandse Commissie beoordeling veiligheid voedselcontactmaterialen</option>
+        <option value="Nederlandse orde van advocaten">Nederlandse orde van advocaten</option>
+        <option value="Nederlandse Sportraad">Nederlandse Sportraad</option>
+        <option value="Nederlandse Voedsel- en Warenautoriteit">Nederlandse Voedsel- en Warenautoriteit</option>
+        <option value="Onderwijsraad">Onderwijsraad</option>
+        <option value="Openbaar Ministerie">Openbaar Ministerie</option>
+        <option value="Orde van Octrooigemachtigden">Orde van Octrooigemachtigden</option>
+        <option value="Orgaan voor de Friese taal">Orgaan voor de Friese taal</option>
+        <option value="Organisatie en Personeel Rijk">Organisatie en Personeel Rijk</option>
+        <option value="Overlegorgaan Fysieke Leefomgeving">Overlegorgaan Fysieke Leefomgeving</option>
+        <option value="Paresto">Paresto</option>
+        <option value="Parket bij de Hoge Raad">Parket bij de Hoge Raad</option>
+        <option value="Politie">Politie</option>
+        <option value="Politieonderwijsraad">Politieonderwijsraad</option>
+        <option value="ProRail">ProRail</option>
+        <option value="Raad van Advies herbezinning NVWA">Raad van Advies herbezinning NVWA</option>
+        <option value="Raad van Beroep in Ambtenarenzaken van Aruba, Curaçao, Sint Maarten en van Bonaire, Sint Eustatius en Saba">Raad van Beroep in Ambtenarenzaken van Aruba, Curaçao, Sint Maarten en van Bonaire, Sint Eustatius en Saba</option>
+        <option value="Raad van Beroep voor Belastingzaken van Aruba, Curaçao, Sint Maarten en van Bonaire, Sint Eustatius en Saba">Raad van Beroep voor Belastingzaken van Aruba, Curaçao, Sint Maarten en van Bonaire, Sint Eustatius en Saba</option>
+        <option value="Raad van Deskundigen voor de nationale meetstandaarden">Raad van Deskundigen voor de nationale meetstandaarden</option>
+        <option value="Raad van State">Raad van State</option>
+        <option value="Raad voor Cultuur">Raad voor Cultuur</option>
+        <option value="Raad voor de Kinderbescherming">Raad voor de Kinderbescherming</option>
+        <option value="Raad voor de leefomgeving en infrastructuur">Raad voor de leefomgeving en infrastructuur</option>
+        <option value="Raad voor de rechtshandhaving">Raad voor de rechtshandhaving</option>
+        <option value="Raad voor de rechtspraak">Raad voor de rechtspraak</option>
+        <option value="Raad voor dierenaangelegenheden">Raad voor dierenaangelegenheden</option>
+        <option value="Raad voor het Openbaar Bestuur">Raad voor het Openbaar Bestuur</option>
+        <option value="Raad voor strafrechtstoepassing en jeugdbescherming">Raad voor strafrechtstoepassing en jeugdbescherming</option>
+        <option value="Raad voor Volksgezondheid en Samenleving">Raad voor Volksgezondheid en Samenleving</option>
+        <option value="Rechtbank Amsterdam">Rechtbank Amsterdam</option>
+        <option value="Rechtbank Den Haag">Rechtbank Den Haag</option>
+        <option value="Rechtbank Gelderland">Rechtbank Gelderland</option>
+        <option value="Rechtbank Limburg">Rechtbank Limburg</option>
+        <option value="Rechtbank Midden-Nederland">Rechtbank Midden-Nederland</option>
+        <option value="Rechtbank Noord-Holland">Rechtbank Noord-Holland</option>
+        <option value="Rechtbank Noord-Nederland">Rechtbank Noord-Nederland</option>
+        <option value="Rechtbank Oost-Brabant">Rechtbank Oost-Brabant</option>
+        <option value="Rechtbank Overijssel">Rechtbank Overijssel</option>
+        <option value="Rechtbank Rotterdam">Rechtbank Rotterdam</option>
+        <option value="Rechtbank Zeeland-West-Brabant">Rechtbank Zeeland-West-Brabant</option>
+        <option value="Rijksdienst voor het Cultureel Erfgoed">Rijksdienst voor het Cultureel Erfgoed</option>
+        <option value="Rijksdienst voor Identiteitsgegevens">Rijksdienst voor Identiteitsgegevens</option>
+        <option value="Rijksdienst voor Ondernemend Nederland">Rijksdienst voor Ondernemend Nederland</option>
+        <option value="Rijksinspectie Digitale Infrastructuur">Rijksinspectie Digitale Infrastructuur</option>
+        <option value="Rijksinstituut voor Volksgezondheid en Milieu">Rijksinstituut voor Volksgezondheid en Milieu</option>
+        <option value="Rijksorganisatie Beveiliging en Logistiek">Rijksorganisatie Beveiliging en Logistiek</option>
+        <option value="Rijksorganisatie voor Ontwikkeling, Digitalisering en Innovatie">Rijksorganisatie voor Ontwikkeling, Digitalisering en Innovatie</option>
+        <option value="Rijksoverheid">Rijksoverheid</option>
+        <option value="Rijksvastgoedbedrijf">Rijksvastgoedbedrijf</option>
+        <option value="Rijkswaterstaat">Rijkswaterstaat</option>
+        <option value="Selectiecommissie tijdelijk besluit specifieke uitkering verbetering digitale dienstverlening">Selectiecommissie tijdelijk besluit specifieke uitkering verbetering digitale dienstverlening</option>
+        <option value="Sociaal-Economische Raad">Sociaal-Economische Raad</option>
+        <option value="SSC-ICT">SSC-ICT</option>
+        <option value="Staatscommissie tegen Discriminatie en Racisme">Staatscommissie tegen Discriminatie en Racisme</option>
+        <option value="Staatscommissie voor het internationaal privaatrecht">Staatscommissie voor het internationaal privaatrecht</option>
+        <option value="Staatstoezicht op de Mijnen">Staatstoezicht op de Mijnen</option>
+        <option value="Technische commissie bodembeweging">Technische commissie bodembeweging</option>
+        <option value="Tijdelijke adviescommissie regionaal investeringsfonds mbo 2019-2022">Tijdelijke adviescommissie regionaal investeringsfonds mbo 2019-2022</option>
+        <option value="Toetsingscommissie vangnet Participatiewet">Toetsingscommissie vangnet Participatiewet</option>
+        <option value="Topteams">Topteams</option>
+        <option value="Tweede Kamer">Tweede Kamer</option>
+        <option value="Verenigde Vergadering">Verenigde Vergadering</option>
+        <option value="Visserijcommissie BES">Visserijcommissie BES</option>
+        <option value="Welzijnscommissie Dierziekten">Welzijnscommissie Dierziekten</option>
+        <option value="Wetenschappelijk Onderzoek- en Datacentrum">Wetenschappelijk Onderzoek- en Datacentrum</option>
+        <option value="Wetenschappelijke Adviescommissie Convenant Onbedwelmd Ritueel Slachten">Wetenschappelijke Adviescommissie Convenant Onbedwelmd Ritueel Slachten</option>
+        <option value="Wetenschappelijke autoriteit CITES">Wetenschappelijke autoriteit CITES</option>
+        <option value="Wetenschappelijke Klimaatraad">Wetenschappelijke Klimaatraad</option>
+        <option value="Wetenschappelijke Raad voor het Regeringsbeleid">Wetenschappelijke Raad voor het Regeringsbeleid</option>
+      </select>
+      <span class="help">Keuzelijst gebaseerd op de TOOI-waardenlijst "Register overige overheidsorganisaties compleet", versie 13.</span>
+    </div>
+    <div class="form-group">
+      <label for="email">E-mailadres</label>
+      <input type="email" id="email" placeholder="Optioneel">
+      <span class="help">Alleen invullen als je eventueel benaderd wilt worden over je feedback.</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>2. Je feedback</h2>
+
+    <div class="form-group">
+      <label for="onderdeel">Op welk MDTO-onderdeel wil je commentaar leveren? <span class="required">*</span></label>
+      <select id="onderdeel" required onchange="updateHoofdstukken()">
+        <option value="">-- Kies een MDTO-onderdeel --</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="hoofdstuk">Op welk hoofdstuk/onderdeel heb je commentaar? <span class="required">*</span></label>
+      <select id="hoofdstuk" required disabled>
+        <option value="">-- Kies eerst een MDTO-onderdeel --</option>
+      </select>
+      <div id="hoofdstukNotice"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Wat voor soort feedback geef je? <span class="required">*</span></label>
+      <div class="radio-group">
+        <label class="radio-option"><input type="radio" name="typeFeedback" value="Inhoudelijke wijziging">Inhoudelijke wijziging</label>
+        <label class="radio-option"><input type="radio" name="typeFeedback" value="Onjuistheid/fout">Onjuistheid / fout</label>
+        <label class="radio-option"><input type="radio" name="typeFeedback" value="Onduidelijkheid">Onduidelijkheid</label>
+        <label class="radio-option"><input type="radio" name="typeFeedback" value="Ontbrekende informatie">Ontbrekende informatie</label>
+        <label class="radio-option"><input type="radio" name="typeFeedback" value="Voorbeeld/toepassing ontbreekt">Voorbeeld / toepassing ontbreekt</label>
+        <label class="radio-option"><input type="radio" name="typeFeedback" value="Redactionele wijziging">Redactionele wijziging</label>
+        <label class="radio-option"><input type="radio" name="typeFeedback" value="Technische wijziging">Technische wijziging</label>
+        <label class="radio-option"><input type="radio" name="typeFeedback" value="Anders">Anders</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Welke prioriteit heeft deze wijziging? <span class="required">*</span></label>
+      <div class="radio-group">
+        <label class="radio-option"><input type="radio" name="prioriteit" value="Kritiek"><span><strong>Kritiek</strong> – noodzakelijk voor correctheid of bruikbaarheid</span></label>
+        <label class="radio-option"><input type="radio" name="prioriteit" value="Hoog"><span><strong>Hoog</strong> – belangrijke verbetering</span></label>
+        <label class="radio-option"><input type="radio" name="prioriteit" value="Middel"><span><strong>Middel</strong> – wenselijke verbetering</span></label>
+        <label class="radio-option"><input type="radio" name="prioriteit" value="Laag"><span><strong>Laag</strong> – kleine verbetering of suggestie</span></label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="opmerking">Opmerking / feedback <span class="required">*</span></label>
+      <textarea id="opmerking" required placeholder="Beschrijf zo concreet mogelijk wat volgens jou aangepast, verduidelijkt of toegevoegd moet worden."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="voorstel">Concreet voorstel voor verbetering</label>
+      <textarea id="voorstel" placeholder="Optioneel: geef bijvoorbeeld een alternatieve tekst, formulering of inhoudelijke oplossing."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="toelichting">Voorbeeld / toelichting</label>
+      <textarea id="toelichting" placeholder="Optioneel: geef een praktijkvoorbeeld, use case of andere toelichting."></textarea>
+    </div>
+
+    <div class="button-row">
+      <button class="btn-primary" onclick="voegFeedbackToe()">Feedback toevoegen</button>
+      <button class="btn-secondary" onclick="resetFeedbackForm()">Velden leegmaken</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>3. Ingevoerde feedback</h2>
+    <p>Aantal feedbackpunten: <span class="counter" id="counter">0</span></p>
+    <div id="feedbackOverzicht"><p class="help">Er zijn nog geen feedbackpunten toegevoegd.</p></div>
+    <div class="button-row">
+      <button class="btn-success" onclick="exporteerCSV()">Exporteer naar CSV</button>
+      <button class="btn-secondary" onclick="wisAlleFeedback()">Alle feedback wissen</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  CONCEPT Feedbackformulier MDTO-handreiking
+</footer>
+
+<script>
+const hoofdstukken = {
+  "MDTO-Metagegevensschema": [
+    "Samenvatting","1. Introductie","1.1 Wat is een metagegevensschema","1.2 Objecten",
+    "1.2.1 Soorten objecten","1.2.2 Aggregaties","1.2.3 Overerving","1.2.4 Bestanden",
+    "1.2.5 Contextobjecten","1.3 De structuur van metagegevens","1.3.1 Attribuut-waardepaar",
+    "1.3.2 Enkelvoudig gegeven","1.3.3 Gegevensgroep","1.3.4 Verwijzing","1.3.5 Begrip",
+    "1.3.6 Klassespecificatie","1.3.7 Attribuutspecificatie","1.3.8 Datatypen",
+    "2. Klassespecificaties","2.1 Object","2.1.1 identificatie","2.1.2 naam","2.2 Informatieobject",
+    "2.2.1 aggregatieniveau","2.2.2 classificatie","2.2.3 trefwoord","2.2.4 omschrijving",
+    "2.2.5 raadpleeglocatie","2.2.6 dekkingInTijd","2.2.7 dekkingInRuimte","2.2.8 taal",
+    "2.2.9 event","2.2.10 waardering","2.2.11 bewaartermijn","2.2.12 informatiecategorie",
+    "2.2.13 isOnderdeelVan","2.2.14 bevatOnderdeel","2.2.15 heeftRepresentatie",
+    "2.2.16 aanvullendeMetagegevens","2.2.17 gerelateerdInformatieobject","2.2.18 archiefvormer",
+    "2.2.19 betrokkene","2.2.20 activiteit","2.2.21 beperkingGebruik","2.3 Bestand",
+    "2.3.1 omvang","2.3.2 bestandsformaat","2.3.3 checksum","2.3.4 URLBestand",
+    "2.3.5 isRepresentatieVan","2.4 Actor","2.5 Bedrijfsactiviteit","2.6 Locatie",
+    "3. Gegevensgroepen","3.1 identificatieGegevens","3.1.1 identificatieKenmerk",
+    "3.1.2 identificatieBron","3.2 verwijzingsGegevens","3.2.1 verwijzingNaam",
+    "3.2.2 verwijzingIdentificatie","3.3 begripGegevens","3.3.1 begripLabel","3.3.2 begripCode",
+    "3.3.3 begripBegrippenlijst","3.4 dekkingInTijdGegevens","3.4.1 dekkingInTijdType",
+    "3.4.2 dekkingInTijdBegindatum","3.4.3 dekkingInTijdEinddatum","3.5 eventGegevens",
+    "3.5.1 eventType","3.5.2 eventTijd","3.5.3 eventVerantwoordelijkActor","3.5.4 eventResultaat",
+    "3.6 gerelateerdInformatieobjectGegevens","3.6.1 gerelateerdInformatieobjectVerwijzing",
+    "3.6.2 gerelateerdInformatieobjectTypeRelatie","3.7 betrokkeneGegevens",
+    "3.7.1 betrokkeneTypeRelatie","3.7.2 betrokkeneActor","3.8 beperkingGebruikGegevens",
+    "3.8.1 beperkingGebruikType","3.8.2 beperkingGebruikNadereBeschrijving",
+    "3.8.3 beperkingGebruikDocumentatie","3.8.4 beperkingGebruikTermijn","3.9 termijnGegevens",
+    "3.9.1 termijnTriggerStartLooptijd","3.9.2 termijnStartdatumLooptijd","3.9.3 termijnLooptijd",
+    "3.9.4 termijnEinddatum","3.10 checksumGegevens","3.10.1 checksumAlgoritme",
+    "3.10.2 checksumWaarde","3.10.3 checksumDatum","3.11 raadpleeglocatieGegevens",
+    "3.11.1 raadpleeglocatieFysiek","3.11.2 raadpleeglocatieOnline","4. Begrippenlijsten",
+    "4.1 Aggregatieniveaus","4.2 EventTypeLijst","4.3 Waarderingen","4.4 Relatietypen (betrokkene)",
+    "4.5 Relatietypen (informatieobject)","4.6 BeperkingGebruikTypeLijst","4.7 ChecksumAlgoritme"
+  ],
+
+  "MDTO-TMLO-TMR": [
+    "Samenvatting","1. Introductie","2. Mapping van TMLO/TMR naar MDTO",
+    "3. Wijzigingen ten opzichte van TMLO en TMR","3.1 Toepassingsgebied","3.2 Terminologie",
+    "3.3 Specificatie","3.4 Onderdelen","3.5 Presentatie","3.6 Nummering attributen",
+    "3.7 Verplichtingsniveaus aangepast","3.8 Geen eigen toepassingsprofiel","3.9 Aggregatieniveaus",
+    "3.10 Beperking gebruik","3.11 Betrokkene","3.12 Bewaartermijn","3.13 Integriteit",
+    "3.14 Vorm van informatieobjecten"
+  ],
+
+  "MDTO-XSD": null,
+
+  "MDTO-Stappenplan": [
+    "Samenvatting","1. Introductie","2. Stappen",
+    "2.1 Maak een keuze tussen generiek of organisatiespecifiek",
+    "2.2 Bepaal waar MDTO/het schema (als eerste) toegepast moet worden",
+    "3. Stappen per verandercontext","3.1 De aanschaf van nieuwe informatiesystemen",
+    "3.2 De inrichting van nieuwe informatiesystemen","3.3 De doorontwikkeling van bestaande informatiesystemen",
+    "3.4 Een uitwisseling tussen informatiesystemen (binnen en/of buiten de eigen organisatie)",
+    "4. Metadata mapping","4.1 Stap 1: Betrek medewerkers met de benodigde kennis",
+    "4.2 Stap 2: Bepaal welke vorm de mapping krijgt","4.3 Stap 3: Voer de mapping uit",
+    "4.4 Stap 4: Maak afspraken over aanvullende metagegevens","4.5 Stap 5: Stel de mapping vast",
+    "4.6 Stap 6: Controleer periodiek of de mapping nog klopt"
+  ],
+
+  "MDTO-SIP-aanleverproces": [
+    "Samenvatting","1. Introductie","2. Aanleverproces Submission Information Package",
+    "2.1 Processen voor aanlevering","2.1.1 Deel geautomatiseerd","2.1.2 Vereenvoudigd (aanbevolen)",
+    "3. Voorwaarden voor aanlevering","3.1 Voorwaarden bronsysteem","3.2 Voorwaarden export bronsysteem",
+    "3.3 Voorwaarden doelsysteem","3.4 Voorwaarden pakbon","3.5 Aggregatieniveaus",
+    "3.6 Vervolgexporten","3.7 Wijze van verzending en bestemming",
+    "3.8 Voorwaarde formaat van export","3.9 Maximum aantal bestanden",
+    "3.10 Controle op verzending","3.11 Berichtenservice voor controle op ontvangst"
+  ],
+
+  "MDTO-RDF": null,
+
+  "MDTO-Conform": [
+    "Samenvatting","1. MDTO-conform","1.1 Minimaal MDTO-conform","1.2 Volledig MDTO-conform",
+    "1.3 Verplicht indien bekend","1.4 Aanvullende metagegevens","1.5 Aanvullende waarden"
+  ],
+
+  "MDTO-SIP-specificatie": [
+    "Samenvatting","1. Introductie","2. Structuur van een Submission Information Package (SIP)",
+    "2.1 Sidecar-structuur","2.2 Aggregatieniveau","2.3 Naamgeving","2.4 Metagegevens MDTO aanleveren",
+    "2.5 Additionele metagegevens aanleveren","3. Pakbon","4. Begrippen"
+  ],
+
+  "MDTO-Veelgestelde-vragen": [
+    "Samenvatting","1. Introductie","2. Algemene vragen","2.1 Wat zijn metagegevens?",
+    "2.2 Hoe verhoudt MDTO zich tot TMLO en TMR?","2.3 Hoe verhoudt MDTO zich tot andere metadatastandaarden?",
+    "2.4 Welke metadata-entiteiten zijn in scope binnen MDTO?","2.5 Waaruit bestaat MDTO?",
+    "2.6 Waarop is MDTO van toepassing?","2.7 Voor wie is MDTO bedoeld?","2.8 Waarom gebruik je MDTO?",
+    "2.9 Wanneer gebruik je MDTO?","2.10 Wat is de scope van MDTO?",
+    "2.11 Welke wijzigingen zijn gedaan aan MDTO voor de overgang naar GitHub?",
+    "3. Ontwikkelproces en -keuzes",
+    "3.1 Is bij het maken van MDTO ook feedback en advies gevraagd aan leveranciers van informatiesystemen of alleen van gebruikers?",
+    "3.2 Waarom is MDTO ontwikkeld?","3.3 Wat is het verschil tussen TMLO/TMR en MDTO?",
+    "3.4 Waarom bevat MDTO een RDF-ontologie?","3.5 Waarom sluit MDTO niet aan bij het Metamodel Informatiemodellering (MIM)?",
+    "4. Verhouding tot wetgeving en andere standaarden","4.1 Wat is de relatie met archiefwetgeving?",
+    "4.2 Is er een verband met de Wet open overheid (Woo)?","4.3 Wat is de relatie met NEN-ISO 23081?",
+    "4.4 Wat is de relatie met NEN-ISO 15489-1?","4.5 Wat is de relatie met TOOI?",
+    "4.6 Wat is de relatie met DCAT-AP-NL en het NL profiel op ISO 19115?",
+    "4.7 Wat is de relatie met andere metagegevensstandaarden?",
+    "4.8 Hoe verhoudt MDTO zich tot Records in Contexts (RiC)?",
+    "5. Inhoudelijke keuzes - metagegevensschema","5.1 Wat is het verschil tussen informatieobject en bestand?",
+    "5.2 MDTO gebruikt de term ‘informatieobject’, terwijl in de Wet open overheid en de nieuwe Archiefwet voor de term ‘document’ is gekozen. Is dit niet verwarrend?",
+    "5.3 Waarom bevat MDTO geen domeinspecifieke metagegevens?",
+    "5.4 Hoe kunnen organisaties workflowgegevens van zaken vastleggen en uitwisselen met MDTO?",
+    "5.5 Waarom kunnen toekomstige events (eventplan) niet meer worden vastgelegd in MDTO?",
+    "5.6 Waarom is tijdens de ontwikkeling van MDTO het attribuut Aggregatieniveau toegevoegd, en hoe kan dit attribuut vertaald worden naar de praktijk?",
+    "5.7 Veel attributen zijn in MDTO niet zonder meer verplicht, zorgt dat niet alsnog voor veel verschillen in de vastlegging van metadata? Het doel is standaardisatie, loop je dat doel zo niet mis?",
+    "5.8 Waarom zijn niet alle mogelijke waarden in de begrippenlijsten gestandaardiseerd? Hierdoor kan er een ongewenste diversiteit in waarden optreden.",
+    "6. Inhoudelijke keuzes – koppelvlak",
+    "6.1 Waarom is het MDTO-koppelvlak gesplitst in twee documenten, één voor de SIP specificatie en één voor het proces van aanlevering?",
+    "6.2 Waarom is gekozen voor de sidecar structuur?","6.3 Mag ik op een andere manier uitwisselen dan met een sidecar structuur?",
+    "6.4 Hoe wordt in de SIP de relatie gelegd tussen het informatieobject en het bestand?",
+    "6.5 Waarom staat er bronsysteem, terwijl er vaak een exporttool wordt gebruikt?",
+    "6.6 Wat is het verschil tussen een koppelvlak en een uitwisseling via zaak- en documentservices?",
+    "6.7 Waarom is er nog een uitwisselformaat met een SIP?","6.8 Is het koppelvlak alleen bedoeld voor de uitwisseling met een e-depot?",
+    "7. Implementatie","7.1 Als mijn organisatie nu met TMLO of TMR werkt, wat is dan een goede reden om op korte termijn over te gaan op MDTO?",
+    "7.2 Vanaf welk moment moet bij overbrenging aan MDTO voldaan worden?","7.3 Hoe lang mogen we nog gebruik maken van TMLO/TMR?",
+    "7.4 Waar moeten organisaties MDTO toepassen?","7.5 Zijn er praktijkervaringen met het toepassen van MDTO?",
+    "8. Status","8.1 Is MDTO verplicht?","8.2 Waarom is MDTO niet verplicht?"
+  ]
+};
+
+const onderdeelSelect=document.getElementById("onderdeel");
+Object.keys(hoofdstukken).forEach(naam=>{
+  const o=document.createElement("option"); o.value=naam; o.textContent=naam; onderdeelSelect.appendChild(o);
+});
+
+let feedbackData=[], teller=0;
+
+function updateHoofdstukken(){
+  const key=onderdeelSelect.value, select=document.getElementById("hoofdstuk");
+  const notice=document.getElementById("hoofdstukNotice");
+  select.innerHTML=""; notice.innerHTML="";
+  if(!key){select.disabled=true;select.innerHTML='<option value="">-- Kies eerst een MDTO-onderdeel --</option>';return;}
+  select.disabled=false;
+  const eerste=document.createElement("option"); eerste.value=""; eerste.textContent="-- Kies een hoofdstuk/onderdeel --"; select.appendChild(eerste);
+  if(hoofdstukken[key]===null){
+    const o=document.createElement("option"); o.value="Nog uit te werken"; o.textContent="Hoofdstukstructuur nog uit te werken"; select.appendChild(o);
+    notice.innerHTML='<div class="notice">Voor dit onderdeel zijn nog geen hoofdstukken aangeleverd. De tijdelijke optie kan later eenvoudig worden vervangen door de definitieve hoofdstukstructuur.</div>';
+  } else {
+    hoofdstukken[key].forEach(h=>{const o=document.createElement("option");o.value=h;o.textContent=h;select.appendChild(o);});
+  }
+}
+
+function radio(name){const x=document.querySelector(`input[name="${name}"]:checked`);return x?x.value:"";}
+function esc(s){const d=document.createElement("div");d.textContent=s??"";return d.innerHTML;}
+
+function voegFeedbackToe(){
+  const hoofdstuk=document.getElementById("hoofdstuk").value;
+  const type=radio("typeFeedback"), prioriteit=radio("prioriteit");
+  const opmerking=document.getElementById("opmerking").value.trim();
+  if(!onderdeelSelect.value){alert("Kies een MDTO-onderdeel.");return;}
+  if(!hoofdstuk){alert("Kies een hoofdstuk of onderdeel.");return;}
+  if(!type){alert("Kies het type feedback.");return;}
+  if(!prioriteit){alert("Geef een prioriteit aan.");return;}
+  if(!opmerking){alert("Vul je opmerking in.");return;}
+
+  teller++;
+  const record={
+    id:"MDTO-"+new Date().getFullYear()+"-"+String(teller).padStart(3,"0"),
+    datum:new Date().toLocaleString("nl-NL"),
+    naam:document.getElementById("naam").value.trim(),
+    organisatie:document.getElementById("organisatie").value.trim(),
+    email:document.getElementById("email").value.trim(),
+    onderdeel:onderdeelSelect.value,
+    hoofdstuk,
+    typeFeedback:type,
+    prioriteit,
+    opmerking,
+    voorstel:document.getElementById("voorstel").value.trim(),
+    toelichting:document.getElementById("toelichting").value.trim()
+  };
+  feedbackData.push(record);renderFeedback();resetFeedbackForm();
+  alert("Feedbackpunt "+record.id+" is toegevoegd.");
+}
+
+function resetFeedbackForm(){
+  onderdeelSelect.value="";
+  const s=document.getElementById("hoofdstuk");s.disabled=true;s.innerHTML='<option value="">-- Kies eerst een MDTO-onderdeel --</option>';
+  document.getElementById("hoofdstukNotice").innerHTML="";
+  document.querySelectorAll('input[name="typeFeedback"],input[name="prioriteit"]').forEach(x=>x.checked=false);
+  document.getElementById("opmerking").value="";
+  document.getElementById("voorstel").value="";
+  document.getElementById("toelichting").value="";
+}
+
+function renderFeedback(){
+  const c=document.getElementById("feedbackOverzicht");
+  document.getElementById("counter").textContent=feedbackData.length;
+  if(!feedbackData.length){c.innerHTML='<p class="help">Er zijn nog geen feedbackpunten toegevoegd.</p>';return;}
+  c.innerHTML="";
+  feedbackData.forEach(r=>{
+    const item=document.createElement("div");item.className="feedback-item";
+    item.innerHTML=`<div class="feedback-meta"><strong>${esc(r.id)}</strong> | ${esc(r.datum)}</div>
+      <div><strong>Onderdeel:</strong> ${esc(r.onderdeel)}</div>
+      <div><strong>Hoofdstuk:</strong> ${esc(r.hoofdstuk)}</div>
+      <div><strong>Type:</strong> ${esc(r.typeFeedback)}</div>
+      <div style="margin-top:6px"><strong>Prioriteit:</strong> <span class="priority priority-${r.prioriteit.toLowerCase()}">${esc(r.prioriteit)}</span></div>
+      <div style="margin-top:10px"><strong>Opmerking:</strong><br>${esc(r.opmerking)}</div>
+      ${r.voorstel?`<div style="margin-top:10px"><strong>Voorstel:</strong><br>${esc(r.voorstel)}</div>`:""}
+      ${r.toelichting?`<div style="margin-top:10px"><strong>Toelichting:</strong><br>${esc(r.toelichting)}</div>`:""}
+      ${r.naam||r.organisatie?`<div class="feedback-meta" style="margin-top:10px">${esc(r.naam)}${r.organisatie?" – "+esc(r.organisatie):""}</div>`:""}`;
+    c.appendChild(item);
+  });
+}
+
+function csvEscape(v){
+  v=String(v??"");
+  return /[";\r\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;
+}
+function exporteerCSV(){
+  if(!feedbackData.length){alert("Er zijn nog geen feedbackpunten om te exporteren.");return;}
+  const headers=["ID","Datum","Naam","Organisatie","E-mailadres","MDTO-onderdeel","Hoofdstuk","Type feedback","Prioriteit","Opmerking","Voorstel","Toelichting"];
+  let csv=headers.map(csvEscape).join(";")+"\r\n";
+  feedbackData.forEach(r=>{csv+=[r.id,r.datum,r.naam,r.organisatie,r.email,r.onderdeel,r.hoofdstuk,r.typeFeedback,r.prioriteit,r.opmerking,r.voorstel,r.toelichting].map(csvEscape).join(";")+"\r\n";});
+  const blob=new Blob(["\uFEFF"+csv],{type:"text/csv;charset=utf-8;"});
+  const url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download="MDTO-feedback-"+new Date().toISOString().slice(0,10)+".csv";
+  document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
+}
+function wisAlleFeedback(){
+  if(!feedbackData.length)return;
+  if(confirm("Weet je zeker dat je alle ingevoerde feedback wilt wissen?")){feedbackData=[];teller=0;renderFeedback();}
+}
+</script>
+</body>
+</html>

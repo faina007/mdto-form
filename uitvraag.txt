@@ -1,0 +1,272 @@
+Ik wil voor deze repo een uitvraag doen aan redactieleden om deze handreiking te verbeteren. Hiervoor wil ik een formulier invullen zodat gebruikers makkelijk kunnen kiezen welke onderdelen aanpssingen of wijzigingen nodig hebben.
+
+Kun je hiervoor een formulier ontwikkelen zodat we op een gestructureerde manier de feedback kunnen ontvangen en vervolgens op een gemakkelijke manier kunnen analyseren in bijv. CSV/Excel?
+
+De onderstaande hoofdstukken daar kunnen gebruikers commentaar op aanleveren. 
+In het formulier wil ik een keuzeveld: Op welke MDTO-onderdeel wil je commentaar leveren?
+Vervolgens wil ik dat op basis van de keuze de bijhorende hoofdstukken structuur in een keuzeveld worden gegoten zodat de gebruiker een keuze hieruit kan maken.
+Als de gebruiker een hoofdstuk heeft gekozen, dan moet er een opmerkingenveld beschikbaar zijn zodat de gebruikers zijn feedback kan ingeven.
+
+Ook moet per opmerkingen een prioriteit aangegeven kunnen worden.
+
+Dit zijn de MDTO onderdelen.
+MDTO-Metagegevensschema
+MDTO-XSD
+MDTO-TMLO-TMR
+MDTO-Stappenplan
+MDTO-SIP-aanleverproces
+MDTO-RDF
+MDTO-Conform
+MDTO-SIP-specificatie
+MDTO-Veelgestelde-vragen
+
+== Dit zijn de hoofdstukken van MDTO onderdeel "MDTO-Metagegevensschema"
+Samenvatting
+1.Introductie
+1.1Wat is een metagegevensschema
+1.2Objecten
+1.2.1Soorten objecten
+1.2.2Aggregaties
+1.2.3Overerving
+1.2.4Bestanden
+1.2.5Contextobjecten
+1.3De structuur van metagegevens
+1.3.1Attribuut-waardepaar
+1.3.2Enkelvoudig gegeven
+1.3.3Gegevensgroep
+1.3.4Verwijzing
+1.3.5Begrip
+1.3.6Klassespecificatie
+1.3.7Attribuutspecificatie
+1.3.8Datatypen
+2.Klassespecificaties
+2.1Object
+2.1.1identificatie
+2.1.2naam
+2.2Informatieobject
+2.2.1aggregatieniveau
+2.2.2classificatie
+2.2.3trefwoord
+2.2.4omschrijving
+2.2.5raadpleeglocatie
+2.2.6dekkingInTijd
+2.2.7dekkingInRuimte
+2.2.8taal
+2.2.9event
+2.2.10waardering
+2.2.11bewaartermijn
+2.2.12informatiecategorie
+2.2.13isOnderdeelVan
+2.2.14bevatOnderdeel
+2.2.15heeftRepresentatie
+2.2.16aanvullendeMetagegevens
+2.2.17gerelateerdInformatieobject
+2.2.18archiefvormer
+2.2.19betrokkene
+2.2.20activiteit
+2.2.21beperkingGebruik
+2.3Bestand
+2.3.1omvang
+2.3.2bestandsformaat
+2.3.3checksum
+2.3.4URLBestand
+2.3.5isRepresentatieVan
+2.4Actor
+2.5Bedrijfsactiviteit
+2.6Locatie
+3.Gegevensgroepen
+3.1identificatieGegevens
+3.1.1identificatieKenmerk
+3.1.2identificatieBron
+3.2verwijzingsGegevens
+3.2.1verwijzingNaam
+3.2.2verwijzingIdentificatie
+3.3begripGegevens
+3.3.1begripLabel
+3.3.2begripCode
+3.3.3begripBegrippenlijst
+3.4dekkingInTijdGegevens
+3.4.1dekkingInTijdType
+3.4.2dekkingInTijdBegindatum
+3.4.3dekkingInTijdEinddatum
+3.5eventGegevens
+3.5.1eventType
+3.5.2eventTijd
+3.5.3eventVerantwoordelijkActor
+3.5.4eventResultaat
+3.6gerelateerdInformatieobjectGegevens
+3.6.1gerelateerdInformatieobjectVerwijzing
+3.6.2gerelateerdInformatieobjectTypeRelatie
+3.7betrokkeneGegevens
+3.7.1betrokkeneTypeRelatie
+3.7.2betrokkeneActor
+3.8beperkingGebruikGegevens
+3.8.1beperkingGebruikType
+3.8.2beperkingGebruikNadereBeschrijving
+3.8.3beperkingGebruikDocumentatie
+3.8.4beperkingGebruikTermijn
+3.9termijnGegevens
+3.9.1termijnTriggerStartLooptijd
+3.9.2termijnStartdatumLooptijd
+3.9.3termijnLooptijd
+3.9.4termijnEinddatum
+3.10checksumGegevens
+3.10.1checksumAlgoritme
+3.10.2checksumWaarde
+3.10.3checksumDatum
+3.11raadpleeglocatieGegevens
+3.11.1raadpleeglocatieFysiek
+3.11.2raadpleeglocatieOnline
+4.Begrippenlijsten
+4.1Aggregatieniveaus
+4.2EventTypeLijst
+4.3Waarderingen
+4.4Relatietypen (betrokkene)
+4.5Relatietypen (informatieobject)
+4.6BeperkingGebruikTypeLijst
+4.7ChecksumAlgoritme
+
+
+== Dit zijn de hoofdstukken van MDTO onderdeel "MDTO-TMLO-TMR"
+Samenvatting
+1.Introductie
+2.Mapping van TMLO/TMR naar MDTO
+3.Wijzigingen ten opzichte van TMLO en TMR
+3.1Toepassingsgebied
+3.2Terminologie
+3.3Specificatie
+3.4Onderdelen
+3.5Presentatie
+3.6Nummering attributen
+3.7Verplichtingsniveaus aangepast
+3.8Geen eigen toepassingsprofiel
+3.9Aggregatieniveaus
+3.10Beperking gebruik
+3.11Betrokkene
+3.12Bewaartermijn
+3.13Integriteit
+3.14Vorm van informatieobjecten
+
+== Dit zijn de hoofdstukken van MDTO onderdeel "MDTO-XSD"
+Deze verder uitwerken..
+
+== Dit zijn de hoofdstukken van MDTO onderdeel "MDTO-Stappenplan"
+Samenvatting
+1.Introductie
+2.Stappen
+2.1Maak een keuze tussen generiek of organisatiespecifiek
+2.2Bepaal waar MDTO/het schema (als eerste) toegepast moet worden
+3.Stappen per verandercontext
+3.1De aanschaf van nieuwe informatiesystemen
+3.2De inrichting van nieuwe informatiesystemen
+3.3De doorontwikkeling van bestaande informatiesystemen
+3.4Een uitwisseling tussen informatiesystemen (binnen en/of buiten de eigen organisatie)
+4.Metadata mapping
+4.1Stap 1: Betrek medewerkers met de benodigde kennis
+4.2Stap 2: Bepaal welke vorm de mapping krijgt
+4.3Stap 3: Voer de mapping uit
+4.4Stap 4: Maak afspraken over aanvullende metagegevens
+4.5Stap 5: Stel de mapping vast
+4.6Stap 6: Controleer periodiek of de mapping nog klopt
+
+== Dit zijn de hoofdstukken van MDTO onderdeel "MDTO-SIP-aanleverproces"
+Samenvatting
+1.Introductie
+2.Aanleverproces Submission Information Package
+2.1Processen voor aanlevering
+2.1.1Deel geautomatiseerd
+2.1.2Vereenvoudigd (aanbevolen)
+3.Voorwaarden voor aanlevering
+3.1Voorwaarden bronsysteem
+3.2Voorwaarden export bronsysteem
+3.3Voorwaarden doelsysteem
+3.4Voorwaarden pakbon
+3.5Aggregatieniveaus
+3.6Vervolgexporten
+3.7Wijze van verzending en bestemming
+3.8Voorwaarde formaat van export
+3.9Maximum aantal bestanden
+3.10Controle op verzending
+3.11Berichtenservice voor controle op ontvangst
+
+== Dit zijn de hoofdstukken van MDTO onderdeel "MDTO-RDF"
+Deze verder uitwerken..
+
+== Dit zijn de hoofdstukken van MDTO onderdeel "MDTO-Conform"
+Samenvatting
+1.MDTO-conform
+1.1Minimaal MDTO-conform
+1.2Volledig MDTO-conform
+1.3Verplicht indien bekend
+1.4Aanvullende metagegevens
+1.5Aanvullende waarden
+
+== Dit zijn de hoofdstukken van MDTO onderdeel "MDTO-SIP-specificatie"
+Samenvatting
+1.Introductie
+2.Structuur van een Submission Information Package (SIP)
+2.1Sidecar-structuur
+2.2Aggregatieniveau
+2.3Naamgeving
+2.4Metagegevens MDTO aanleveren
+2.5Additionele metagegevens aanleveren
+3.Pakbon
+4.Begrippen
+
+== Dit zijn de hoofdstukken van MDTO onderdeel "MDTO-Veelgestelde-vragen"
+Samenvatting
+1.Introductie
+2.Algemene vragen
+2.1Wat zijn metagegevens?
+2.2Hoe verhoudt MDTO zich tot TMLO en TMR?
+2.3Hoe verhoudt MDTO zich tot andere metadatastandaarden?
+2.4Welke metadata-entiteiten zijn in scope binnen MDTO?
+2.5Waaruit bestaat MDTO?
+2.6Waarop is MDTO van toepassing?
+2.7Voor wie is MDTO bedoeld?
+2.8Waarom gebruik je MDTO?
+2.9Wanneer gebruik je MDTO?
+2.10Wat is de scope van MDTO?
+2.11Welke wijzigingen zijn gedaan aan MDTO voor de overgang naar GitHub?
+3.Ontwikkelproces en -keuzes
+3.1Is bij het maken van MDTO ook feedback en advies gevraagd aan leveranciers van informatiesystemen of alleen van gebruikers?
+3.2Waarom is MDTO ontwikkeld?
+3.3Wat is het verschil tussen TMLO/TMR en MDTO?
+3.4Waarom bevat MDTO een RDF-ontologie?
+3.5Waarom sluit MDTO niet aan bij het Metamodel Informatiemodellering (MIM)?
+4.Verhouding tot wetgeving en andere standaarden
+4.1Wat is de relatie met archiefwetgeving?
+4.2Is er een verband met de Wet open overheid (Woo)?
+4.3Wat is de relatie met NEN-ISO 23081?
+4.4Wat is de relatie met NEN-ISO 15489-1?
+4.5Wat is de relatie met TOOI?
+4.6Wat is de relatie met DCAT-AP-NL en het NL profiel op ISO 19115?
+4.7Wat is de relatie met andere metagegevensstandaarden?
+4.8Hoe verhoudt MDTO zich tot Records in Contexts (RiC)?
+5.Inhoudelijke keuzes - metagegevensschema
+5.1Wat is het verschil tussen informatieobject en bestand?
+5.2MDTO gebruikt de term ‘informatieobject’, terwijl in de Wet open overheid en de nieuwe Archiefwet voor de term ’document‘ is gekozen. Is dit niet verwarrend?
+5.3Waarom bevat MDTO geen domeinspecifieke metagegevens?
+5.4Hoe kunnen organisaties workflowgegevens van zaken vastleggen en uitwisselen met MDTO?
+5.5Waarom kunnen toekomstige events (eventplan) niet meer worden vastgelegd in MDTO?
+5.6Waarom is tijdens de ontwikkeling van MDTO het attribuut Aggregatieniveau toegevoegd, en hoe kan dit attribuut vertaald worden naar de praktijk?
+5.7Veel attributen zijn in MDTO zijn niet zonder meer verplicht, zorgt dat niet alsnog voor veel verschillen in de vastlegging van metadata? Het doel is standaardisatie, loop je dat doel zo niet mis?
+5.8Waarom zijn niet alle mogelijke waarden in de begrippenlijsten gestandaardiseerd? Hierdoor kan er een ongewenste diversiteit in waarden optreden.
+6.Inhoudelijke keuzes – koppelvlak
+6.1Waarom is het MDTO-koppelvlak gesplitst in twee documenten, één voor de SIP specificatie en één voor het proces van aanlevering?
+6.2Waarom is gekozen voor de sidecar structuur?
+6.3Mag ik op een andere manier uitwisselen dan met een sidecar structuur?
+6.4Hoe wordt in de SIP de relatie gelegd tussen het informatieobject en het bestand?
+6.5Waarom staat er bronsysteem, terwijl er vaak een exporttool wordt gebruikt?
+6.6Wat is het verschil tussen een koppelvlak en een uitwisseling via zaak- en documentservices?
+6.7Waarom is er nog een uitwisselformaat met een SIP?
+6.8Is het koppelvlak alleen bedoeld voor de uitwisseling met een e-depot?
+7.Implementatie
+7.1Als mijn organisatie nu met TMLO of TMR werkt, wat is dan een goede reden om op korte termijn over te gaan op MDTO?
+7.2Vanaf welk moment moet bij overbrenging aan MDTO voldaan worden?
+7.3Hoe lang mogen we nog gebruik maken van TMLO/TMR?
+7.4Waar moeten organisaties MDTO toepassen?
+7.5Zijn er praktijkervaringen met het toepassen van MDTO?
+8.Status
+8.1Is MDTO verplicht?
+8.2Waarom is MDTO niet verplicht?
