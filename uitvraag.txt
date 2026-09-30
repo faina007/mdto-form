@@ -2,6 +2,15 @@ Ik wil voor deze repo een uitvraag doen aan redactieleden om deze handreiking te
 
 Kun je hiervoor een formulier ontwikkelen zodat we op een gestructureerde manier de feedback kunnen ontvangen en vervolgens op een gemakkelijke manier kunnen analyseren in bijv. CSV/Excel?
 
+Algemene gegevens over de persoon:
+Naam / namen reviewers
+Organisatie
+Contactpersoon
+Functie contactpersoons
+Emailadres
+telefoonnummer
+Ga je akkord met anonieme publicatie van de opmerkingen? 
+
 De onderstaande hoofdstukken daar kunnen gebruikers commentaar op aanleveren. 
 In het formulier wil ik een keuzeveld: Op welke MDTO-onderdeel wil je commentaar leveren?
 Vervolgens wil ik dat op basis van de keuze de bijhorende hoofdstukken structuur in een keuzeveld worden gegoten zodat de gebruiker een keuze hieruit kan maken.

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CONCEPT Feedbackformulier MDTO-handreiking – redactie</title>
+<title>CONCEPT Feedbackformulier MDTO-handreiking</title>
 <style>
 :root{
   --primary:#005a9c;--primary-dark:#004578;--bg:#f4f6f8;--card:#fff;
@@ -52,7 +52,7 @@ footer{padding:0 20px 40px;color:var(--muted);font-size:13px}
 
 <header>
   <div class="container">
-    <h1>Feedbackformulier MDTO-handreiking – redactie</h1>
+    <h1>CONCEPT Feedbackformulier MDTO-handreiking</h1>
     <p>Help mee om de handreiking en bijbehorende MDTO-documentatie te verbeteren.</p>
   </div>
 </header>
@@ -72,10 +72,15 @@ footer{padding:0 20px 40px;color:var(--muted);font-size:13px}
   </div>
 
   <section class="card">
-    <h2>1. Algemene gegevens</h2>
-    <div class="form-group"><label for="naam">Naam / namen reviewers</label><input type="text" id="naam" placeholder="Optioneel"></div>
-    <div class="form-group"><label for="organisatie">Organisatie</label><select id="organisatie"><option value="">-- Kies je organisatie --</option>
-        
+    <h2>1. Over jou</h2>
+    <div class="form-group">
+      <label for="naam">Naam</label>
+      <input type="text" id="naam" placeholder="Optioneel">
+    </div>
+    <div class="form-group">
+      <label for="organisatie">Organisatie</label>
+      <select id="organisatie">
+        <option value="">-- Kies je organisatie --</option>
         <option value="CIBG">CIBG</option>
         <option value="Gecombineerde Commissie Vennootschapsrecht">Gecombineerde Commissie Vennootschapsrecht</option>
         <option value="Adviescollege huis- en hobbydierenlijst">Adviescollege huis- en hobbydierenlijst</option>
@@ -285,16 +290,14 @@ footer{padding:0 20px 40px;color:var(--muted);font-size:13px}
         <option value="Wetenschappelijke autoriteit CITES">Wetenschappelijke autoriteit CITES</option>
         <option value="Wetenschappelijke Klimaatraad">Wetenschappelijke Klimaatraad</option>
         <option value="Wetenschappelijke Raad voor het Regeringsbeleid">Wetenschappelijke Raad voor het Regeringsbeleid</option>
-      </select></div>
-    <div class="form-group"><label for="contactpersoon">Contactpersoon</label><input type="text" id="contactpersoon" placeholder="Optioneel"></div>
-    <div class="form-group"><label for="functie">Functie contactpersoon</label><input type="text" id="functie" placeholder="Optioneel"></div>
-    <div class="form-group"><label for="email">E-mailadres</label><input type="email" id="email" placeholder="Optioneel"></div>
-    <div class="form-group"><label for="telefoon">Telefoonnummer</label><input type="tel" id="telefoon" placeholder="Optioneel"></div>
-    <div class="form-group"><label>Ga je akkoord met anonieme publicatie van de opmerkingen?</label><div class="radio-group">
-      <label class="radio-option"><input type="radio" name="anoniem" value="Ja">Ja</label>
-      <label class="radio-option"><input type="radio" name="anoniem" value="Nee">Nee</label>
-      <label class="radio-option"><input type="radio" name="anoniem" value="Geen antwoord">Geen antwoord</label>
-    </div></div>
+      </select>
+      <span class="help">Keuzelijst gebaseerd op de TOOI-waardenlijst "Register overige overheidsorganisaties compleet", versie 13.</span>
+    </div>
+    <div class="form-group">
+      <label for="email">E-mailadres</label>
+      <input type="email" id="email" placeholder="Optioneel">
+      <span class="help">Alleen invullen als je eventueel benaderd wilt worden over je feedback.</span>
+    </div>
   </section>
 
   <section class="card">
@@ -372,7 +375,7 @@ footer{padding:0 20px 40px;color:var(--muted);font-size:13px}
 </main>
 
 <footer>
-  CONCEPT Feedbackformulier MDTO-handreiking – redactie
+  CONCEPT Feedbackformulier MDTO-handreiking
 </footer>
 
 <script>
@@ -538,11 +541,7 @@ function voegFeedbackToe(){
     datum:new Date().toLocaleString("nl-NL"),
     naam:document.getElementById("naam").value.trim(),
     organisatie:document.getElementById("organisatie").value.trim(),
-    contactpersoon:document.getElementById("contactpersoon").value.trim(),
-    functie:document.getElementById("functie").value.trim(),
     email:document.getElementById("email").value.trim(),
-    telefoon:document.getElementById("telefoon").value.trim(),
-    anoniem:radio("anoniem"),
     onderdeel:onderdeelSelect.value,
     hoofdstuk,
     typeFeedback:type,
@@ -560,10 +559,6 @@ function resetFeedbackForm(){
   const s=document.getElementById("hoofdstuk");s.disabled=true;s.innerHTML='<option value="">-- Kies eerst een MDTO-onderdeel --</option>';
   document.getElementById("hoofdstukNotice").innerHTML="";
   document.querySelectorAll('input[name="typeFeedback"],input[name="prioriteit"]').forEach(x=>x.checked=false);
-  document.querySelectorAll('input[name="anoniem"]').forEach(x=>x.checked=false);
-  document.getElementById("contactpersoon").value="";
-  document.getElementById("functie").value="";
-  document.getElementById("telefoon").value="";
   document.getElementById("opmerking").value="";
   document.getElementById("voorstel").value="";
   document.getElementById("toelichting").value="";
@@ -595,9 +590,9 @@ function csvEscape(v){
 }
 function exporteerCSV(){
   if(!feedbackData.length){alert("Er zijn nog geen feedbackpunten om te exporteren.");return;}
-  const headers=["ID","Datum","Naam / namen reviewers","Organisatie","Contactpersoon","Functie contactpersoon","E-mailadres","Telefoonnummer","Akkoord anonieme publicatie","MDTO-onderdeel","Hoofdstuk","Type feedback","Prioriteit","Opmerking","Voorstel","Toelichting"];
+  const headers=["ID","Datum","Naam","Organisatie","E-mailadres","MDTO-onderdeel","Hoofdstuk","Type feedback","Prioriteit","Opmerking","Voorstel","Toelichting"];
   let csv=headers.map(csvEscape).join(";")+"\r\n";
-  feedbackData.forEach(r=>{csv+=[r.id,r.datum,r.naam,r.organisatie,r.contactpersoon,r.functie,r.email,r.telefoon,r.anoniem,r.onderdeel,r.hoofdstuk,r.typeFeedback,r.prioriteit,r.opmerking,r.voorstel,r.toelichting].map(csvEscape).join(";")+"\r\n";});
+  feedbackData.forEach(r=>{csv+=[r.id,r.datum,r.naam,r.organisatie,r.email,r.onderdeel,r.hoofdstuk,r.typeFeedback,r.prioriteit,r.opmerking,r.voorstel,r.toelichting].map(csvEscape).join(";")+"\r\n";});
   const blob=new Blob(["\uFEFF"+csv],{type:"text/csv;charset=utf-8;"});
   const url=URL.createObjectURL(blob),a=document.createElement("a");
   a.href=url;a.download="MDTO-feedback-"+new Date().toISOString().slice(0,10)+".csv";
