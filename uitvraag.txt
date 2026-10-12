@@ -1,7 +1,7 @@
 Ik wil voor deze repo een uitvraag doen aan redactieleden om deze handreiking te verbeteren. Hiervoor wil ik een formulier invullen zodat gebruikers makkelijk kunnen kiezen welke MDTO onderdelen aanpssingen of wijzigingen nodig hebben. Kun je hiervoor een formulier ontwikkelen zodat we op een gestructureerde manier de feedback kunnen ontvangen en vervolgens op een gemakkelijke manier kunnen analyseren in bijv. CSV/Excel?
 
 === Introductietekst
-Het toepassingsgebied van MDTO blijft hetzelfde; de focus op het informatieobject blijft behouden. Met deze uitvraag willen we de handreiking verbeteren zonder het toepassingsgebied te veranderen. Waar loop je in de praktijk tegenaan? Wat zou je aan MDTO willen aanpassen, verduidelijken of aanvullen? Beschrijf je feedback zo concreet mogelijk en geef waar mogelijk een voorstel voor verbetering. Je kunt meerdere feedbackpunten toevoegen; elk feedbackpunt wordt een afzonderlijke verwerkt. Vul je persoonsgegevens één keer in en voeg daarna zo veel feedbackpunten toe als nodig.
+Het toepassingsgebied van MDTO blijft hetzelfde; de focus op het informatieobject blijft behouden. Met deze uitvraag willen we de handreiking verbeteren zonder het toepassingsgebied te veranderen. Waar loop je in de praktijk tegenaan? Wat zou je aan MDTO willen aanpassen, verduidelijken of aanvullen? Beschrijf je feedback zo concreet mogelijk en geef waar mogelijk een voorstel voor verbetering. Je kunt meerdere feedbackpunten toevoegen; elk feedbackpunt wordt een afzonderlijk verwerkt. Vul je persoonsgegevens één keer in en voeg daarna zo veel feedbackpunten toe als nodig.
 
 === Algemene gegevens
 - Naam / namen reviewers - verplicht
