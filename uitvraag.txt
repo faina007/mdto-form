@@ -6,9 +6,7 @@ De feedback kan middels een excel/csv worden geexporteerd vanuit de website.
 Mogelijk is er een oplossing dat een gebruiker eenmalig zijn persoonsgegevens kan invullen, maar toch meerdere feedback-regels kan aanmaken.
 
 === Introductietekst
-Graag een introduceren tekst bij het formulier.
-Hert toepassingsgebied van MDTO blijft hetzelfde waarbijd de focus op het Informatiebobject wordt behouden. 
-De focus: wat zou je aanpast willen zien aan MDTO waar loop je tegenaan en wat zou je aangepast willen zien?
+Het toepassingsgebied van MDTO blijft hetzelfde; de focus op het informatieobject blijft behouden. Met deze uitvraag willen we de handreiking verbeteren zonder het toepassingsgebied te veranderen. Waar loop je in de praktijk tegenaan? Wat zou je aan MDTO willen aanpassen, verduidelijken of aanvullen? Beschrijf je feedback zo concreet mogelijk en geef waar mogelijk een voorstel voor verbetering. Je kunt meerdere feedbackpunten toevoegen; elk feedbackpunt wordt een afzonderlijke verwerkt. Vul je persoonsgegevens één keer in en voeg daarna zo veel feedbackpunten toe als nodig.
 
 === Algemene gegevens
 - Naam / namen reviewers - verplicht
@@ -27,19 +25,12 @@ In het formulier wil ik een keuzelijst: Op welke MDTO-onderdeel wil je commentaa
 - Definitie van MDTO-conform
 - Aanleverproces Submission Information Package
 - RDF-ontologie
-- Mapping van TMLO/TMR naar MDTO
 - Stappenplan
-- Overzicht belangrijke wijzingen
 - Antwoorden op veelgestelde vragen
 
 == Per MDTO onderdeel wordt aangegeven wat voor sooft feedback het betreft.
 Wat voor soort feedback geef je?
 - Inhoudelijke wijziging
-- Onjuistheid / fout
-- Onduidelijkheid
-- Ontbrekende informatie
-- Voorbeeld / toepassing ontbreekt
-- Redactionele wijziging
 - Technische wijziging
 - Anders
 
@@ -49,8 +40,30 @@ Wat voor soort feedback geef je?
 - Voorbeeld/toelichting - tekstveld, optioneel, tekstuele toelichting
 
 === Wil je deelnemen aan een MDTO redactiegroep?
-Ik wil ook een mogelijkheid bieden om de indieners van het formulier zich te laten opgeveven om in de toekomst mee te doen voor een MDTO redactiegroep. Ook graag een introductietekst wat deelname aan een redactiegroep betekent en wat hs iet.
+Ik wil ook een mogelijkheid bieden om de indieners van het formulier zich te laten opgeveven om in de toekomst mee te doen voor een MDTO redactiegroep. 
+Gebruik hiervoor de volgende introductietekst: Een redactiegroep helpt actief mee om de MDTO-handreiking verder te verbeteren. Daarbij gaat het niet alleen om meedenken, maar ook om samen teksten en wijzigingsvoorstellen te bespreken, feedback uit te werken en vanuit ieders eigen kennis en ervaring bij te dragen aan concrete verbeteringen.
+
+Tijdsinvestering: we gaan uit van vijf redactievergaderingen van elk twee uur, met daarnaast ongeveer twee uur voorbereiding per vergadering. Dit komt neer op een indicatieve tijdsinvestering van circa twintig uur in totaal. De daadwerkelijke tijdsinvestering stemmen we verder af op basis van de beschikbaarheid van de deelnemers en de definitieve samenstelling en werkwijze van de redactiegroep.
+
+Met je aanmelding geef je aan welke onderwerpen je interessant vindt en welke kennis en ervaring je wilt inbrengen. De aanmelding is nog geen definitieve plaatsing in een redactiegroep. Zo nodig nemen we contact met je op om je mogelijke bijdrage en beschikbaarheid verder af te stemmen.
+
 Volgende velden opnemen:
-- In welke MDTO onderdeel ben je geinteresseerd? Gebruik hierbij de keuzelijst van de MDTO onderdelen.
+- In welke MDTO onderdeel ben je geinteresseerd? Gebruik hierbij de volgende categorieën voor redactiegroep om op te geven zijn vastlegging, uitwisseling en documentatie.
 - Korte motivatie 
 	- een tekstveld waarbij gebruikers een motiviatie opgeven. graag ook een teskstuele toelichting erbij zodat de gebruiker weet wat hij moet invullen. Het moet duidelijk zijn welke expertise, ervaring en kennis de toekomstige beoogde redactielid kan meenenen.
+
+
+categorieën voor redactiegroep waarbij alleen vastleggen, uitwisseling en documentatie mogen worden aangevinkt. Het moet duidelijk zijn welke MDTO-onderdelen horen bij de categorie zodat men weet waarvoor ze zich opgeven.
+Vastlegging
+- Metagegevensschema
+- Begrippenlijsten
+ 
+Uitwisseling
+- XML-schema
+- Submission Information Package
+- Definitie van MDTO-conform
+- RDF-ontologie
+ 
+Docuemntatie
+- Stappenplan
+- Antwoorden op veelgestelde vragen
